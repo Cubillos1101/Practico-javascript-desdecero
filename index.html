@@ -115,7 +115,7 @@
 
         </nav> 
 
-        <aside class="product-detail inactive">
+        <aside id="shoppingCartContainer" class="inactive">
             <div class="tittle-container">
                 <img src="./icons/flechita.svg" alt="arrow">
                 <p class="tittle">My orden</p>
@@ -161,22 +161,26 @@
             </div>
         </aside>
 
+        <aside id="productDetail" class="inactive">
+            <div class="product-detail-close">
+                <img src="./icons/icon_close.png" alt="icon_close">
+            </div>
+                <img src="https://images.pexels.com/photos/1149601/pexels-photo-1149601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""> 
+            
+            <div id="product-info">
+                <p>$350.000</p>
+                <p>Bike</p>
+                <p>Wiht its practical this bike also fulfills a decorative function, add your hall or workspace</p>
+                <button class="primary-button add-to-card-button">
+                    <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+                    Add to cart
+                </button>
+            </div>
+        </aside>
+
         <div class="cards-container">
-
-           <!-- <div class="product-card">
-               <img src="https://images.pexels.com/photos/1149601/pexels-photo-1149601.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""> 
-               <div class="product-info">
-                <div>
-                    <p>$120.000</p>
-                    <p>Bike</p>
-                </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                   </figure>
-               </div>
-            </div>-->
-
         </div>
+
     <script src="./main.js"></script>   
 </body>
 </html>
