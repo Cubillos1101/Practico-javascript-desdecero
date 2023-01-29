@@ -8,6 +8,7 @@ const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const productDetailContainer = document.querySelector('#productDetail')
 const cardsContainer = document.querySelector('.cards-container');
 
+
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoIcon.addEventListener('click', toggleCarrritoAside);
@@ -58,7 +59,6 @@ function toggleCarrritoAside () {
 
 const productList = [];
 
-
 function openProductDetailAside() {
     shoppingCartContainer.classList.add('inactive');
 
@@ -87,29 +87,30 @@ productList.push({
 
 function renderProducts(practic){
     for (product of practic){
+       
         const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
-    
         const productImg= document.createElement('img');
+        const productInfo = document.createElement('div');
+        const productInfoDiv = document.createElement('div');    
+        const productPrice = document.createElement('div');
+        const productName = document.createElement('div');
+        const productInfoFigure = document.createElement('figure');
+        const productImgCart = document.createElement('img');
+
+        productCard.classList.add('product-card');
+        
         productImg.setAttribute('src', product.image);
         productImg.addEventListener('click', openProductDetailAside);
     
-        const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
     
-        const productInfoDiv = document.createElement('div');
-    
-        const productPrice = document.createElement('div');
         productPrice.innerText = '$' + product.price;
     
-        const productName = document.createElement('div');
         productName.innerText = product.name;
     
         productInfoDiv.appendChild(productPrice);
         productInfoDiv.appendChild(productName);
     
-        const productInfoFigure = document.createElement('figure');
-        const productImgCart = document.createElement('img');
         productImgCart.setAttribute('src', './icons/bt_add_to_cart.svg');
     
         productInfoFigure.appendChild(productImgCart);
@@ -123,5 +124,5 @@ function renderProducts(practic){
         cardsContainer.appendChild(productCard);
     }
 }
-
+   
 renderProducts(productList);
